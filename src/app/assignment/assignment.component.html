@@ -1,0 +1,55 @@
+<!-- assignment.component.html -->
+<div>
+    <h2>Assign Cab and Driver</h2>
+  
+    <app-cab-selection (cabSelected)="selectedCab = $event"></app-cab-selection>
+  
+    <app-driver-selection (driverSelected)="selectedDriver = $event"></app-driver-selection>
+  
+   <!--<button [disabled]="!selectedCab || !selectedDriver" (click)="assignCab()">Assign cab</button>
+  
+    <button [disabled]="!selectedCab || !selectedDriver" (click)="assignDriver()">Assign driver</button>
+ --> 
+ <button [disabled]="!selectedCab || !selectedDriver" (click)="assignCabAndDriver()">Assign</button>
+   <!--<td>
+    <div *ngIf="assignedCab">
+        <h3>Assigned Cab:</h3>
+        <p>model: {{ assignedCab.model }}</p>
+      </div>
+
+      <div *ngIf="assignedDriver">
+        <h3>Assigned Driver:</h3>
+        <p>Name: {{ assignedDriver.name }}</p>
+    </div>
+   </td> -->
+
+   <table class="table-border">
+    <thead>
+      
+    </thead>
+    <tbody>
+      <tr *ngIf="assignedCab || assignedDriver">
+        <td>
+          <div *ngIf="assignedCab">
+            <h3>Assigned Cab:</h3>
+            <p>Model: {{ assignedCab.model }}</p>
+          </div>
+        </td>
+        <td>
+          <div *ngIf="assignedDriver">
+            <h3>Assigned Driver:</h3>
+            <p>Name: {{ assignedDriver.name }}</p>
+          </div>
+        </td>
+      </tr>
+      <tr *ngIf="!assignedCab && !assignedDriver">
+        <td colspan="2">No assignment found</td>
+      </tr>
+    </tbody>
+  </table>
+  
+      
+      
+  
+</div>
+  

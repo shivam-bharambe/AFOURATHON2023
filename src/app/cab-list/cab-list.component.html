@@ -1,0 +1,26 @@
+<div class = "row">
+    <h2> CABS List</h2>
+</div>
+
+<table class = "table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>  MODEL</th>
+            
+            <th> COLOR</th>
+            <th> OPERATIONS </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let cab of cabs" >
+            <td> {{ cab.model }} </td>
+            <td> {{ cab.color}} </td>
+            
+            <td>
+                <button (click) = "updateCab(cab._id)" class = "btn btn-primary"> Update</button>
+                <button (click) = "deleteCab(cab._id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "cabDetails(cab._id)" class = "btn btn-primary" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,21 @@
+<!-- cab-selection.component.html -->
+
+<table class ="table table-striped ta">
+<div>
+    <h2>Select Cab</h2>
+    <thead>
+        <th>MODEL</th>
+        <th>BUTTON</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cab of cabs">
+            <td>{{ cab.model }}</td>
+
+            <td>
+            <button (click)="selectCab(cab)" style="margin-left: 10px">Select</button>
+            </td>  
+        </tr>
+    </tbody>
+    
+  </div>
+</table>

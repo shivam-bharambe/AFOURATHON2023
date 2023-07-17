@@ -1,0 +1,19 @@
+<!-- driver-selection.component.html -->
+<table class ="table table-striped ta">
+<div>
+    <h2>Select Driver</h2>
+    <thead>
+        <th>driver name </th>
+        <th>button </th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let driver of drivers" >
+            <td>{{ driver.name }}</td>
+            <td>
+                  <button (click)="selectDriver(driver)">Select</button>
+              </td>
+              </tr>
+    </tbody>
+    
+  </div>
+</table>

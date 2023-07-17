@@ -1,0 +1,26 @@
+<div class = "row">
+    <h2> DRIVER List</h2>
+</div>
+
+<table class = "table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>  Name</th>
+            
+            <th> phone</th>
+            <th> Email </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let driver of driver" >
+            <td> {{ driver.name }} </td>
+            <td> {{ driver.phone }} </td>
+            <td> {{ driver.email }} </td>
+            <td>
+                <button (click) = "updateDriver(driver._id)" class = "btn btn-primary"> Update</button>
+                <button (click) = "deleteDriver(driver._id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "driverDetails(driver._id)" class = "btn btn-primary" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
